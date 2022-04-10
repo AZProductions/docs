@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/AZProductions/docs/issues"
   },
-  "homepage": "https://github.com/AZProductions/docs#readme"
+  "homepage": "https://github.com/AZProductions/docs#readme",
+  "dependencies": {
+    "next": "^12.1.4",
+    "nextra": "^1.1.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
 }
