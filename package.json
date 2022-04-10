@@ -1,28 +1,16 @@
 {
-  "name": "docs",
-  "version": "1.0.0",
-  "description": "The open-source docs for azsoftware.org",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AZProductions/docs.git"
-  },
-  "author": "AZ Software",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AZProductions/docs/issues"
-  },
-  "homepage": "https://github.com/AZProductions/docs#readme",
   "dependencies": {
-    "next": "^12.1.4",
-    "nextra": "^1.1.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "@mdx-js/loader": "^1.5.1",
+    "@mdx-js/react": "^1.6.18",
+    "@next/mdx": "^9.1.1",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }
