@@ -5,7 +5,18 @@ const Submenu = () => {
   const theme = useTheme();
   const router = useRouter();
   const [sticky, setSticky] = useState(false);
-
+  
+  function Project() 
+  {
+    console.log(router.pathname);
+    if (router.pathname.startsWith('/vacaro'))
+      return "Vacaro";
+    else if (router.pathname.startsWith('/astroflare'))
+      return "AstroFlare";
+    else
+      return "Docs";
+  }
+  
   useEffect(() => {
     const scrollHandler = () => setSticky(document.documentElement.scrollTop > 54);
     document.addEventListener('scroll', scrollHandler);
@@ -18,7 +29,7 @@ const Submenu = () => {
         <nav className="submenu__wrapper">
           <div className={`submenu ${sticky ? 'submenu_sticky' : ''}`}>
             <div className="submenu__inner">
-              <h4 className="submenu__highlightinvert">test</h4>
+              <h4 className="submenu__highlightinvert">{Project()}</h4>
               <Tabs value={router.asPath} onChange={(route) => router.push(route)}>
                 <Tabs.Item label="Overview" value="/" />
                 <Tabs.Item label="Releases" value="/releases" />
@@ -30,7 +41,7 @@ const Submenu = () => {
         <nav className="submenu__wrapper">
           <div className={`submenu ${sticky ? 'submenu_sticky' : ''}`}>
             <div className="submenu__inner">
-              <h4 className="submenu__highlight">test</h4>
+              <h4 className="submenu__highlight">{Project()}</h4>
               <Tabs value={router.asPath} onChange={(route) => router.push(route)}>
                 <Tabs.Item label="Overview" value="/" />
                 <Tabs.Item label="Releases" value="/releases" />
