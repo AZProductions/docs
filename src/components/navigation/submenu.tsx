@@ -7,10 +7,11 @@ const Submenu = () => {
   const [sticky, setSticky] = useState(false);
 
   function Project() {
-    console.log(router.pathname);
-    if (router.pathname.startsWith('/vacaro')) return 'Vacaro';
-    else if (router.pathname.startsWith('/astroflare')) return 'AstroFlare';
-    else return 'Docs';
+    // console.log(router.pathname);
+    // if (router.pathname.startsWith('/vacaro')) return 'Vacaro';
+    // else if (router.pathname.startsWith('/astroflare')) return 'AstroFlare';
+    // else
+    return 'Docs';
   }
 
   useEffect(() => {
