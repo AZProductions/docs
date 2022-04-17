@@ -12,6 +12,6 @@ module.exports = withMDX({
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 })
 
-module.exports = {
-  basePath: '/docs',
-}
+  // module.exports = {
+  //   basePath: '/docs',
+  // }
