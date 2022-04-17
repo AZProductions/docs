@@ -25,6 +25,8 @@ jobs:
         cache: 'npm'
         cache-dependency-path: '**/package-lock.json' # THIS PATTERN did the trick for me.
     - run: npm ci
+    - run: apt-get install rpl -y
+    - run: rpl --dry-run 'https://www.azsoftware.org/_next/*' 'https://www.azsoftware.org/docs/_next/' '**/*'
     - run: npm install && npx next build && npx next export && touch out/.nojekyll
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.2.5
