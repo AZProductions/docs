@@ -52,8 +52,8 @@ function Menu({}) {
                   <Tabs value={router.asPath} hideDivider onChange={(route) => router.push(route)}>
                     <Tabs.Item label="Home" value="https://azsoftware.org/" />
                     <Tabs.Item label="Products" value="https://azsoftware.org/products" />
-                    <Tabs.Item label="Download" value="https://www.azsoftware.org/download" />
-                    <Tabs.Item label="Support" value="https://www.azsoftware.org/support" />
+                    <Tabs.Item label="Download" value="https://azsoftware.org/download" />
+                    <Tabs.Item label="Support" value="https://azsoftware.org/support" />
                     <Tabs.Item label="Status" value="https://dns.azsoftware.org" />
                   </Tabs>
                 </ul>
@@ -98,8 +98,8 @@ function Menu({}) {
                   <Tabs value={router.asPath} hideDivider onChange={(route) => router.push(route)}>
                     <Tabs.Item label="Home" value="https://azsoftware.org/" />
                     <Tabs.Item label="Products" value="https://azsoftware.org/products" />
-                    <Tabs.Item label="Download" value="https://www.azsoftware.org/download" />
-                    <Tabs.Item label="Support" value="https://www.azsoftware.org/support" />
+                    <Tabs.Item label="Download" value="https://azsoftware.org/download" />
+                    <Tabs.Item label="Support" value="https://azsoftware.org/support" />
                     <Tabs.Item label="Status" value="https://dns.azsoftware.org" />
                   </Tabs>
                 </ul>
