@@ -27,7 +27,7 @@ jobs:
     - run: npm ci
     - run: sudo apt-get install -y rpl
     - run: npm install && npx next build && npx next export && touch out/.nojekyll
-    - run: rpl --dry-run 'https://www.azsoftware.org/_next/*' 'https://www.azsoftware.org/docs/_next/' 'src/out/*.*'
+    - run: rpl --dry-run 'https://www.azsoftware.org/_next/*' 'https://www.azsoftware.org/docs/_next/' '/src/out/**'
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
