@@ -73,7 +73,6 @@ function Menu({}) {
                     className="themebutton"
                     auto
                     shadow type="success"
-                    style={{ marginLeft: -10 }}
                     iconRight={<Icons.Book size={16} />}
                   ></Button>
                 </a>
@@ -96,8 +95,8 @@ function Menu({}) {
               <div id="navcol-1" className="collapse navbar-collapse">
                 <ul className="navbar-nav ms-auto">
                   <Tabs value={router.asPath} hideDivider onChange={(route) => router.push(route)}>
-                    <Tabs.Item label="Home" value="https://www.azsoftware.org/" />
-                    <Tabs.Item label="Products" value="https://www.azsoftware.org/products" />
+                    <Tabs.Item label="Home" value="https://azsoftware.org/" />
+                    <Tabs.Item label="Products" value="https://azsoftware.org/products" />
                     <Tabs.Item label="Download" value="https://www.azsoftware.org/download" />
                     <Tabs.Item label="Support" value="https://www.azsoftware.org/support" />
                     <Tabs.Item label="Status" value="https://dns.azsoftware.org" />
@@ -119,7 +118,6 @@ function Menu({}) {
                     className="themebutton"
                     auto
                     shadow type="success"
-                    style={{ marginLeft: -10 }}
                     iconRight={<Icons.Book size={16} />}
                   ></Button>
                 </a>

@@ -5,18 +5,14 @@ const Submenu = () => {
   const theme = useTheme();
   const router = useRouter();
   const [sticky, setSticky] = useState(false);
-  
-  function Project() 
-  {
+
+  function Project() {
     console.log(router.pathname);
-    if (router.pathname.startsWith('/vacaro'))
-      return "Vacaro";
-    else if (router.pathname.startsWith('/astroflare'))
-      return "AstroFlare";
-    else
-      return "Docs";
+    if (router.pathname.startsWith('/vacaro')) return 'Vacaro';
+    else if (router.pathname.startsWith('/astroflare')) return 'AstroFlare';
+    else return 'Docs';
   }
-  
+
   useEffect(() => {
     const scrollHandler = () => setSticky(document.documentElement.scrollTop > 54);
     document.addEventListener('scroll', scrollHandler);
@@ -64,11 +60,12 @@ const Submenu = () => {
         }
         .submenu_sticky {
           position: fixed;
+          border-top: 1px solid ${theme.palette.border};
           z-index: 1100;
           top: 0;
           right: 0;
           left: 0;
-          background: ${theme.palette.background};
+          background: ${theme.palette.accents_1};
           box-shadow: ${
             theme.type === 'dark' ? `inset 0 -1px ${theme.palette.border}` : 'rgba(0, 0, 0, 0.1) 0 0 15px 0'
           };

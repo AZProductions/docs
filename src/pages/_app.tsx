@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/nav.css';
 import '../styles/nav2.css';
 import '../styles/footer.css';
-import {MDXProvider} from '@mdx-js/react'
+import { MDXProvider } from '@mdx-js/react';
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [themeType, setThemeType] = useState<ThemeType>('dark');
