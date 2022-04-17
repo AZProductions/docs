@@ -16,7 +16,7 @@
 module.export = {
   basePath: '/docs',
   assetPrefix: '/docs/'
-  'process.env.BACKEND_URL': 'https://www.azsoftware.org/docs'
+  // 'process.env.BACKEND_URL': 'https://www.azsoftware.org/docs'
 };
 
 module.exports = {
