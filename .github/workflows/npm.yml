@@ -27,7 +27,7 @@ jobs:
     - run: npm ci
     - run: sudo apt-get install -y rpl
     - run: npm install && npx next build && npx next export && touch out/.nojekyll
-    - run: sudo rpl -i 'org/_next' 'docs/_next' out/*.html
+    # - run: sudo rpl -i 'org/_next' 'docs/_next' out/*.html
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
