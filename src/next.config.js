@@ -1,16 +1,21 @@
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/,
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: []
-    // If you use `MDXProvider`, uncomment the following line.
-    // providerImportSource: "@mdx-js/react",
-  }
-});
-module.exports = {
-  basePath: '/docs'
-  // Append the default value with md extensions
-  // pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx']
+// const withMDX = require('@next/mdx')({
+//   extension: /\.mdx?$/,
+//   options: {
+//     remarkPlugins: [],
+//     rehypePlugins: []
+//     // If you use `MDXProvider`, uncomment the following line.
+//     // providerImportSource: "@mdx-js/react",
+//   }
+// });
+// module.exports = widthMDX({
+//   basePath: '/docs'
+//   // Append the default value with md extensions
+//   // pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx']
+// });
+
+module.export = {
+  basePath: '/docs',
+  'process.env.BACKEND_URL': 'https://www.azsoftware.org/docs'
 };
 
 module.exports = {
