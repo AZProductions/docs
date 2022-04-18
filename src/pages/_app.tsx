@@ -59,7 +59,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <PrefersContext.Provider value={{ themeType, switchTheme }}>
           <Menu />
           <div className="content-box">
-            <div>
+            <div className="sidemenu">
               <Sidemenu />
             </div>
             <div className="content">
@@ -93,8 +93,11 @@ const App = ({ Component, pageProps }: AppProps) => {
         .content {
           min-height: calc(100vh - 108px);
           max-width: 782pt;
-          margin: 0 auto;
-          padding: 0 16px;
+          margin: 24px 20px;
+          padding: 5 15px;
+        }
+        .sidemenu {
+          margin-right: 18%;
         }
       `}</style>
     </>
