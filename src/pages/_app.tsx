@@ -58,7 +58,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <CssBaseline />
         <PrefersContext.Provider value={{ themeType, switchTheme }}>
           <Menu />
-          <div className="sidemenu">
+          <div className="content-box">
             <div>
               <Sidemenu />
             </div>
@@ -83,7 +83,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
       <style jsx>{`
-        .sidemenu {
+        .content-box {
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;

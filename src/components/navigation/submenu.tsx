@@ -62,7 +62,7 @@ const Submenu = () => {
         .submenu_sticky {
           position: fixed;
           border-top: 1px solid ${theme.palette.border};
-          border-bottom: 2px solid ${theme.palette.border};
+          // border-bottom: 2px solid ${theme.palette.border};
           z-index: 1100;
           top: 0;
           right: 0;
