@@ -11,6 +11,7 @@ import '../styles/nav.css';
 import '../styles/nav2.css';
 import '../styles/footer.css';
 import { MDXProvider } from '@mdx-js/react';
+import Sidemenu from '@/components/navigation/sidemenu';
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [themeType, setThemeType] = useState<ThemeType>('dark');
@@ -57,9 +58,16 @@ const App = ({ Component, pageProps }: AppProps) => {
         <CssBaseline />
         <PrefersContext.Provider value={{ themeType, switchTheme }}>
           <Menu />
-          <MDXProvider>
-            <Component {...pageProps} />
-          </MDXProvider>
+          <div className="sidemenu">
+            <div>
+              <Sidemenu />
+            </div>
+            <div className="content">
+              <MDXProvider>
+                <Component {...pageProps} />
+              </MDXProvider>
+            </div>
+          </div>
           <Footer />
         </PrefersContext.Provider>
       </GeistProvider>
@@ -74,6 +82,21 @@ const App = ({ Component, pageProps }: AppProps) => {
       <script src="https://www.azsoftware.org/cdn/increment.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+      <style jsx>{`
+        .sidemenu {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          box-sizing: border-box;
+        }
+        .content {
+          min-height: calc(100vh - 108px);
+          max-width: 782pt;
+          margin: 0 auto;
+          padding: 0 16px;
+        }
+      `}</style>
     </>
   );
 };
