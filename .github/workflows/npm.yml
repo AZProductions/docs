@@ -31,5 +31,6 @@ jobs:
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.2.5
       with:
+        token: ${{ secrets.AZ_DEPLOY }}
         folder: src/out
         branch: gh-pages
