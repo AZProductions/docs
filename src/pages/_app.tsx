@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
-import { GeistProvider, CssBaseline, useKeyboard, KeyCode, KeyMod, Keyboard } from '@geist-ui/core';
+import { GeistProvider, CssBaseline, useKeyboard, KeyCode, KeyMod, Keyboard, useTheme } from '@geist-ui/core';
 import { PrefersContext, themes, ThemeType } from '@/lib/use-prefers';
 import Menu from '@/components/navigation/menu';
 import Footer from '@/components/navigation/footer';
@@ -14,6 +14,8 @@ import { MDXProvider } from '@mdx-js/react';
 import Sidemenu from '@/components/navigation/sidemenu';
 
 const App = ({ Component, pageProps }: AppProps) => {
+  const theme = useTheme();
+  const accent1 = theme.palette.accents_1;
   const [themeType, setThemeType] = useState<ThemeType>('dark');
   useEffect(() => {
     document.documentElement.removeAttribute('style');
@@ -59,7 +61,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <PrefersContext.Provider value={{ themeType, switchTheme }}>
           <Menu />
           <div className="content-box">
-            <div className="sidemenu">
+            <div className="sidemenu sidemenucard">
               <Sidemenu />
             </div>
             <div className="content">
@@ -98,6 +100,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         }
         .sidemenu {
           margin-right: 18%;
+        }
+        .sidemenucard {
+          background: ${accent1};
         }
       `}</style>
     </>

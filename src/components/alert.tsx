@@ -1,12 +1,20 @@
-import { Image, Link, Tag } from '@geist-ui/core';
-import { ComponentProps, FC, useState } from 'react';
-import { useTheme } from '@geist-ui/core';
-
-function Alert({ ...imgProps }) {
+import { Link, useTheme, Grid, Card } from '@geist-ui/core';
+export function Alert({ ...imgProps }) {
+  const theme = useTheme();
   return (
-    <></>
-    // <div class="alert alert-success" role="alert" style={{color: '#eeeeee', background: '#dddddd', border-style: none;text-align: center;border-radius: 0px;}}><span id="span-mention" style="font-family: Poppins, sans-serif;color: rgb(0,0,0);font-weight: bold;text-align: center;text-decoration: none;">We just designed a new logo. <a class="alert-link" href="https://medium.com/@az_software/designing-a-new-logo-cef9e13270c0">Read more.</a><br /></span></div>
+    <div>
+      <div dangerouslySetInnerHTML={{ __html: `<!--googleoff: index-->` }} />
+      <Grid style={{ paddingInline: 50, pointerEvents: 'none', marginTop: '6px' }} height="34px">
+        <Card style={{ background: theme.palette.accents_2, height: '100%' }} hoverable>
+          <p style={{ fontSize: 14, marginTop: -13, height: '100%' }}>
+            <strong>Build with us</strong> — A UI-framework, built for speed and ease-of-use.{' '}
+            <Link style={{ pointerEvents: 'stroke' }} block underline href="/vacaro">
+              Vacaro
+            </Link>
+          </p>
+        </Card>
+      </Grid>
+      <div dangerouslySetInnerHTML={{ __html: `<!--googleon: index-->` }} />
+    </div>
   );
 }
-
-export default Alert;

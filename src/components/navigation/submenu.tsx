@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Tabs, useTheme } from '@geist-ui/core';
+import { Alert } from '@/components/alert';
+
 const Submenu = () => {
   const theme = useTheme();
   const router = useRouter();
@@ -28,9 +30,10 @@ const Submenu = () => {
             <div className="submenu__inner">
               <h4 className="submenu__highlightinvert">{Project()}</h4>
               <Tabs value={router.asPath} onChange={(route) => router.push(route)}>
-                <Tabs.Item label="Overview" value="/" />
-                <Tabs.Item label="Releases" value="/releases" />
+                <Tabs.Item label="Home" value="/" />
+                <Tabs.Item label="Vacaro" value="/vacaro" />
               </Tabs>
+              <Alert />
             </div>
           </div>
         </nav>
@@ -40,9 +43,10 @@ const Submenu = () => {
             <div className="submenu__inner">
               <h4 className="submenu__highlight">{Project()}</h4>
               <Tabs value={router.asPath} onChange={(route) => router.push(route)}>
-                <Tabs.Item label="Overview" value="/" />
-                <Tabs.Item label="Releases" value="/releases" />
+                <Tabs.Item label="Home" value="/" />
+                <Tabs.Item label="Vacaro" value="/vacaro" />
               </Tabs>
+              <Alert />
             </div>
           </div>
         </nav>
@@ -57,12 +61,12 @@ const Submenu = () => {
           box-shadow: inset 0 -1px ${theme.palette.border};
         }
         .submenu_sticky {
-          transition: box-shadow 0.2s ease;
+          transition: box-shadow 0s ease;
         }
         .submenu_sticky {
           position: fixed;
           border-top: 1px solid ${theme.palette.border};
-          // border-bottom: 2px solid ${theme.palette.border};
+          border-bottom: 1px solid ${theme.palette.border};
           z-index: 1100;
           top: 0;
           right: 0;
@@ -89,10 +93,10 @@ const Submenu = () => {
           box-sizing: border-box;
         }
         .submenu__inner::-webkit-scrollbar {
-          display: none;
+          // display: none;
         }
         .submenu__inner :global(.content) {
-          display: none;
+          // display: none;
         }
         .submenu__inner :global(.tabs),
         .submenu__inner :global(header) {
